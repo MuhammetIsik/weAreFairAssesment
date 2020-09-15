@@ -1,0 +1,167 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "user is on the website",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2020-09-15T05:34:35.476Z",
+        "line": 4,
+        "name": "Drawing money and check the interest",
+        "description": "",
+        "id": "interest-check;drawing-money-and-check-the-interest",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13894000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "use clicks on the credit that he or she created",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.use_clicks_on_the_credit_that_he_or_she_created()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 188000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user makes sure that Type dropdown is on draw option",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_makes_sure_that_Type_dropdown_is_on_draw_option()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5264000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user draw \"500\" from his account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"500\"",
+                  "offset": 10
+                }
+              ],
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_draw_from_his_account(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5212000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user selects \"30\" on the Applied at Day dropdown means the whole month",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"30\"",
+                  "offset": 13
+                }
+              ],
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_selects_on_the_Applied_at_Day_dropdown_means_the_whole_month(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 154000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicks on Save Transaction button",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.clicks_on_Save_Transaction_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cCredit Available: $[50]0.00 of $1,000.00\u003e but was:\u003cCredit Available: $[]0.00 of $1,000.00\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_the_Credit_Available_section_on_the_page(WeAreFairAssesmentScenarioOneStepDef.java:64)\r\n\tat ✽.verify the Credit Available section on the page(file:///C:/Users/Muhammet%20IŞIK/IdeaProjects/taskProject/src/test/resources/features/WeAreFairAssesmentScenarioOne.feature:10)\r\n",
+              "duration": 363000000,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "verify the Credit Available section on the page",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_the_Credit_Available_section_on_the_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "verify that Interest  is \"$14.38\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"$14.38\"",
+                  "offset": 25
+                }
+              ],
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_that_Interest_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "verify that Total payoff is \"$514.38\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"$514.38\"",
+                  "offset": 28
+                }
+              ],
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_that_Total_payoff_is()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ScenarioOne"
+          }
+        ]
+      }
+    ],
+    "name": "Interest Check",
+    "description": "",
+    "id": "interest-check",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/WeAreFairAssesmentScenarioOne.feature",
+    "tags": [
+      {
+        "name": "@ScenarioOne",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
