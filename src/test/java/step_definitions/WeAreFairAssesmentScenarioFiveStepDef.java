@@ -13,7 +13,7 @@ public class WeAreFairAssesmentScenarioFiveStepDef {
     @When("selects  {string} on the Applied at Day dropdown")
     public void selects_on_the_Applied_at_Day_dropdown(String string) {
         Driver.getDriver().get("http://credit-test.herokuapp.com/");
-        webElements.editTextLink.click();
+        webElements.showTextLink.click();
         Select select = new Select(webElements.appliedAtDay);
         select.selectByVisibleText("14");
     }

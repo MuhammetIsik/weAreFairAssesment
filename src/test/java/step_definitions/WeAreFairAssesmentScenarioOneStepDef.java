@@ -10,6 +10,8 @@ import pages.WeAreFairAssesmentScenarioOnePages;
 import utilities.Driver;
 import utilities.creditUtils;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.lang.Thread.sleep;
 
 public class WeAreFairAssesmentScenarioOneStepDef {
@@ -19,11 +21,7 @@ public class WeAreFairAssesmentScenarioOneStepDef {
     public void use_clicks_on_the_credit_that_he_or_she_created() {
         Driver.getDriver().get("http://credit-test.herokuapp.com/");
         webElement.editTextLink.click();
-        try {
-            sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @Given("user makes sure that Type dropdown is on draw option")
@@ -35,11 +33,7 @@ public class WeAreFairAssesmentScenarioOneStepDef {
     @When("user draw {string} from his account")
     public void user_draw_from_his_account(String string) {
     webElement.transactionAmount.sendKeys(string);
-        try {
-            sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @When("user selects {string} on the Applied at Day dropdown means the whole month")
@@ -47,11 +41,7 @@ public class WeAreFairAssesmentScenarioOneStepDef {
 
         Select select = new Select(webElement.appliedAtDay);
     select.selectByVisibleText("30");
-        try {
-            sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @When("clicks on Save Transaction button")

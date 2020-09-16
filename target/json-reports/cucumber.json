@@ -4,87 +4,58 @@
     "elements": [
       {
         "line": 3,
-        "name": "user is on the website",
+        "name": "A credit with 35% APR and 1000 credit is created",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": []
       },
       {
-        "start_timestamp": "2020-09-15T05:34:35.476Z",
+        "start_timestamp": "2020-09-16T02:01:24.882Z",
         "line": 4,
-        "name": "Drawing money and check the interest",
+        "name": "user try to make a payment more than his or her debt",
         "description": "",
-        "id": "interest-check;drawing-money-and-check-the-interest",
+        "id": "make-a-payment-more-than-owed;user-try-to-make-a-payment-more-than-his-or-her-debt",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13894000000,
+              "duration": 6546000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "use clicks on the credit that he or she created",
+            "name": "user draw $500 from his or her account",
             "match": {
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.use_clicks_on_the_credit_that_he_or_she_created()"
+              "location": "step_definitions.WeAreFairAssesmentScenarioTwoStepDef.user_draw_$500_from_his_or_her_account()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 188000000,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat step_definitions.WeAreFairAssesmentScenarioFiveStepDef.selects_on_the_Applied_at_Day_dropdown(WeAreFairAssesmentScenarioFiveStepDef.java:16)\r\n\tat ✽.selects  \"12\" on the Applied at Day dropdown(file:///C:/Users/Muhammet%20IŞIK/IdeaProjects/taskProject/src/test/resources/features/WeAreFairAssesmentScenarioFive.feature:6)\r\n",
+              "duration": 1916000000,
+              "status": "failed"
             },
             "line": 6,
-            "name": "user makes sure that Type dropdown is on draw option",
-            "match": {
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_makes_sure_that_Type_dropdown_is_on_draw_option()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 5264000000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user draw \"500\" from his account",
+            "name": "selects  \"12\" on the Applied at Day dropdown",
             "match": {
               "arguments": [
                 {
-                  "val": "\"500\"",
-                  "offset": 10
+                  "val": "\"12\"",
+                  "offset": 9
                 }
               ],
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_draw_from_his_account(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 5212000000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user selects \"30\" on the Applied at Day dropdown means the whole month",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"30\"",
-                  "offset": 13
-                }
-              ],
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.user_selects_on_the_Applied_at_Day_dropdown_means_the_whole_month(java.lang.String)"
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.selects_on_the_Applied_at_Day_dropdown(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 154000000,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
-            "line": 9,
+            "line": 7,
             "name": "clicks on Save Transaction button",
             "match": {
               "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.clicks_on_Save_Transaction_button()"
@@ -93,14 +64,41 @@
           },
           {
             "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003cCredit Available: $[50]0.00 of $1,000.00\u003e but was:\u003cCredit Available: $[]0.00 of $1,000.00\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_the_Credit_Available_section_on_the_page(WeAreFairAssesmentScenarioOneStepDef.java:64)\r\n\tat ✽.verify the Credit Available section on the page(file:///C:/Users/Muhammet%20IŞIK/IdeaProjects/taskProject/src/test/resources/features/WeAreFairAssesmentScenarioOne.feature:10)\r\n",
-              "duration": 363000000,
-              "status": "failed"
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user change the Type dropdown option from Draw to Payment",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioTwoStepDef.user_change_the_Type_dropdown_option_from_Draw_to_Payment()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user pay back $700",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.user_pay_back_$700()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 10,
-            "name": "verify the Credit Available section on the page",
+            "name": "selects  \"4\" on the Appliedd at Day dropdown",
             "match": {
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_the_Credit_Available_section_on_the_page()"
+              "arguments": [
+                {
+                  "val": "\"4\"",
+                  "offset": 9
+                }
+              ],
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.selects_on_the_Appliedd_at_Day_dropdown(java.lang.String)"
             },
             "keyword": "Then "
           },
@@ -110,15 +108,20 @@
               "status": "skipped"
             },
             "line": 11,
-            "name": "verify that Interest  is \"$14.38\"",
+            "name": "clicks on Save Transaction button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"$14.38\"",
-                  "offset": 25
-                }
-              ],
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_that_Interest_is(java.lang.String)"
+              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.clicks_on_Save_Transaction_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "verify that Amount cannot exceed what is owed warning is displayed",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.verify_that_Amount_cannot_exceed_what_is_owed_warning_is_displayed()"
             },
             "keyword": "Then "
           },
@@ -127,35 +130,41 @@
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 12,
-            "name": "verify that Total payoff is \"$514.38\"",
+            "line": 13,
+            "name": "user clicks on Remove link to destroy his or her transaction",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"$514.38\"",
-                  "offset": 28
-                }
-              ],
-              "location": "step_definitions.WeAreFairAssesmentScenarioOneStepDef.verify_that_Total_payoff_is()"
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.user_clicks_on_Remove_link_to_destroy_his_or_her_transaction()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "verifies that Transaction was successfully destroyed. message is displayed",
+            "match": {
+              "location": "step_definitions.WeAreFairAssesmentScenarioFiveStepDef.verifies_that_Transaction_was_successfully_destroyed_message_is_displayed()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@ScenarioOne"
+            "name": "@ScenarioFive"
           }
         ]
       }
     ],
-    "name": "Interest Check",
+    "name": "Make a payment more than owed",
     "description": "",
-    "id": "interest-check",
+    "id": "make-a-payment-more-than-owed",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/WeAreFairAssesmentScenarioOne.feature",
+    "uri": "file:src/test/resources/features/WeAreFairAssesmentScenarioFive.feature",
     "tags": [
       {
-        "name": "@ScenarioOne",
+        "name": "@ScenarioFive",
         "type": "Tag",
         "location": {
           "line": 1,

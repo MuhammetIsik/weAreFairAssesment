@@ -12,8 +12,8 @@ public class WeAreFairAssesmentScenarioFivePages {
     public WebElement appliedAtDay;
     @FindBy(name = "commit")
     public WebElement saveTransactionButton;
-    @FindBy(xpath = "//a[@href='/line_of_credits/2601']")
-    public WebElement editTextLink;
+    @FindBy(xpath = "//a[@href='/line_of_credits/2602']")
+    public WebElement showTextLink;
     @FindBy(id = "error_explanation")
     public WebElement errorMessage;
     @FindBy(className = "delete-transaction")

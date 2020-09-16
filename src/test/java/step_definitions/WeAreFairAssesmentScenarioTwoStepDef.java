@@ -9,12 +9,15 @@ import pages.WeAreFairAssesmentScenarioTwoPages;
 import utilities.Driver;
 import utilities.creditUtils;
 
+import java.util.concurrent.TimeUnit;
+
 public class WeAreFairAssesmentScenarioTwoStepDef {
     WeAreFairAssesmentScenarioTwoPages webElements = new WeAreFairAssesmentScenarioTwoPages();
     creditUtils utils = new creditUtils();
     @When("user draw $500 from his or her account")
     public void user_draw_$500_from_his_or_her_account() {
         Driver.getDriver().get("http://credit-test.herokuapp.com/");
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webElements.editTextLink.click();
         webElements.transactionAmount.sendKeys("500");
     }
