@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.658">
-<testcase classname="Make a payment more than owed" name="user try to make a payment more than his or her debt" time="8.567">
-<failure message="" type="java.lang.NullPointerException"><![CDATA[When user draw $500 from his or her account.................................passed
-And selects  "12" on the Applied at Day dropdown............................failed
-And clicks on Save Transaction button.......................................skipped
-Then user change the Type dropdown option from Draw to Payment..............skipped
-Then user pay back $700.....................................................skipped
-Then selects  "4" on the Appliedd at Day dropdown...........................skipped
-And clicks on Save Transaction button.......................................skipped
-Then verify that Amount cannot exceed what is owed warning is displayed.....skipped
-Then user clicks on Remove link to destroy his or her transaction...........skipped
-And verifies that Transaction was successfully destroyed. message is displayed.skipped
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.921">
+<testcase classname="Checking the credit availability" name="User draws $275 on his or her account and the credit availability should be $725" time="4.989">
+<failure message="expected:&lt;Credit Available: $[72]5.00 of $1,000.00&gt; but was:&lt;Credit Available: $[27]5.00 of $1,000.00&gt;" type="org.junit.ComparisonFailure"><![CDATA[When When user draws $275 on his account....................................passed
+Then selects 19 on the Applied at Day dropdown for the day..................passed
+And clicks on Save Transaction button to save...............................passed
+Then verify that the Credit Available amount should be $725.................failed
 
 StackTrace:
-java.lang.NullPointerException
-	at step_definitions.WeAreFairAssesmentScenarioFiveStepDef.selects_on_the_Applied_at_Day_dropdown(WeAreFairAssesmentScenarioFiveStepDef.java:16)
-	at ✽.selects  "12" on the Applied at Day dropdown(file:///C:/Users/Muhammet%20IŞIK/IdeaProjects/taskProject/src/test/resources/features/WeAreFairAssesmentScenarioFive.feature:6)
+org.junit.ComparisonFailure: expected:<Credit Available: $[72]5.00 of $1,000.00> but was:<Credit Available: $[27]5.00 of $1,000.00>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step_definitions.WeAreFairAssesmentScenarioEightStepDef.verify_that_the_Credit_Available_amount_should_be_$725(WeAreFairAssesmentScenarioEightStepDef.java:41)
+	at ✽.verify that the Credit Available amount should be $725(file:///C:/Users/Muhammet%20IŞIK/IdeaProjects/taskProject/src/test/resources/features/WeAreFairAssesmentScenarioEight.feature:8)
 ]]></failure>
 </testcase>
 </testsuite>

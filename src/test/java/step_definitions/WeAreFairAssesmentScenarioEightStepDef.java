@@ -3,7 +3,12 @@ package step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.WeAreFairAssesmentScenarioEightPages;
 import utilities.Driver;
 
@@ -12,7 +17,11 @@ public class WeAreFairAssesmentScenarioEightStepDef {
     @When("When user draws $275 on his account")
     public void when_user_draws_$275_on_his_account() {
         Driver.getDriver().get("http://credit-test.herokuapp.com/");
-        webElements.editTextLink.click();
+        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
+        jsexecutor.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+       webElements.showTextLink.click();
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("transaction_amount")));
     webElements.transactionAmount.sendKeys("275");
     }
 

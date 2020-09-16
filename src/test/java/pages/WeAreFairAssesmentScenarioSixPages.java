@@ -9,7 +9,7 @@ public class WeAreFairAssesmentScenarioSixPages {
     public WeAreFairAssesmentScenarioSixPages(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
-@FindBy(xpath = "a[href='/line_of_credits/2597/edit']")
+@FindBy(xpath = "//a[@href='/line_of_credits/2602/edit']")
     public WebElement editLink;
 @FindBy(id = "line_of_credit_apr")
     public WebElement APRtextBox;
